@@ -45,4 +45,19 @@ SELECT * FROM subject
 --DELETE FROM subject where id=5
 
 
+try
+            {
+
+
+                con.Open();
+                string query = " insert into student values ('sandip','samakushi','984253644','nist')";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("saved sucessfully");
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error :" + ex.InnerException);
+            }
 
